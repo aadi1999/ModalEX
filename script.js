@@ -8,19 +8,21 @@ const overlay = document.querySelector(".overlay");
 
 
 
+const openModal = function(){
+    modal.classList.remove("hidden");
+    overlay.classList.remove("hidden");
+    
+};
 
+const closeModal = function(){
+    modal.classList.add("hidden");
+    overlay.classList.add("hidden");
+};
 
 // console.log(show_modal.length);
 
 for(let i = 0; i < show_modal.length; i++){
-    show_modal[i].addEventListener("click",function(){
-        modal.classList.remove("hidden");
-        overlay.classList.remove("hidden");
-        
-    });
+    show_modal[i].addEventListener("click",openModal);
 }
 
-close_modal.addEventListener("click",function(){
-    modal.classList.add("hidden");
-    overlay.classList.add("hidden");
-})
+close_modal.addEventListener("click",closeModal);
