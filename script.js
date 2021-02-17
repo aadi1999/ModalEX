@@ -20,3 +20,12 @@ for(let i = 0; i < show_modal.length; i++){
 }
 
 close_modal.addEventListener("click",closeModal);
+
+document.addEventListener("keydown",function(e){
+    console.log(e.key);
+    if(e.key === 'Escape'){
+        if(!modal.classList.contains("hidden")){
+            closeModal();
+        }
+    }
+})
